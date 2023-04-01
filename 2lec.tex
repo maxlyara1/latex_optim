@@ -1,0 +1,148 @@
+\documentclass[a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{ulem}
+\usepackage{upgreek}
+\usepackage[T2A]{fontenc}
+\usepackage[english,russian]{babel}
+\usepackage[left=25mm, top=20mm, right=25mm, bottom=30mm, nohead, nofoot]{geometry}
+\usepackage{amsmath,amsfonts,amssymb, amsthm} % математический пакет
+%\usepackage{fancybox,fancyhdr}
+%\usepackage{graphicx}%Вставка картинок правильная
+%\usepackage{float}%"Плавающие" картинки
+%\usepackage{wrapfig}%Обтекание фигур (таблиц, картинок и прочего)
+
+\usepackage{xcolor}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true, allcolors=[RGB]{010,090,200}} % цвет ссылок
+
+\newcommand{\lr}[1]{\left({#1}\right)}
+
+\newtheorem{theorem}{Теорема}
+\newtheorem{theorem}{Теорема}
+\newtheorem{theorem}{Теорема}
+
+\begin{document}
+\large
+\section{Лекция №2}
+\section*{Условная оптимизация}
+\subsection*{Условная оптимизация с ограничениями-равенствами. Функция Лагранжа}
+
+\textbf{def:} Задачей условной оптимизации с ограничениями-равенствами называется следующая задача: 
+$f_1 \rightarrow extr$; $f_i(x)=0(i = \overline{1,m}),(m<n)$, где $f_i(x): R^n \rightarrow R(i = \overline{0,m})$ и $\forall f_i(x)$ - дифференцируема. \\
+
+\begin{theorem}
+необходимое условие экстремума I порядка.
+\end{theorem}
+
+If т.$x^* = (x^*_1,...,x^*_n)$ $\in locextr f_0 \Rightarrow$ then $\exists$ вектор множителей Лагранжа
+$\lambda^* = (\lambda^*_1,...,\lambda^*_m)$ $\in R^m$ $(\lambda)$ $(\lambda^*\neq0)$ такой, что для функции Лагранжа:
+
+\begin{equation}
+\mathcal{L}(x_1,...,x_n;\lambda_1,...,\lambda_m) = f_0(x1,...,x_n) + \sum_{i=1}^{m} \lambda_i f_i(x_1,...,x_n)
+\end{equation}
+
+выполняется условия стационарности:
+
+\begin{equation}
+\begin{aligned}
+\frac{\partial \mathcal{L}(x^*,\lambda^*)}{\partial x_j} &= \frac{\partial f_1(x^*)}{\partial x_j} + \sum_{i=1}^{m}\lambda_i \frac{\partial f_i(x^*)}{\partial x_j} = 0 \quad (j = \overline{1,n})
+\\
+\frac{\partial \mathcal{L}(x^*, \lambda^*)}{\partial \lambda_i} &= f_i(x^*) = 0 \quad (i = \overline{1,m})
+\end{aligned}
+\end{equation}
+
+т.е. 've систему $n+m$ уравнений для нахождения $n+m$ неизвестных $\{x_1^*,...,x_n^*;\lambda_1^*,...,\lambda_m^*\}$ \\
+
+\begin{theorem}
+необходимое условия экстремума II порядка.
+\end{theorem}
+If т.$x^* = (x_1^*,...,x_n^*) \in locmin f_0$ (условие регулярности) и векторы $f'_1(x^*),...,f'_m(x^*)$ - линейно независимы $\Rightarrow$ then $\exists$ вектор множителей Лагранжа \\
+$\lambda^* = (\lambda_1^*,..., \lambda_m^*) \in R^m (\lambda^* \neq 0)$ такой, что для функции Лагранжа 
+
+\begin{equation*}
+\begin{aligned*}
+\mathcal{L}(x,\lambda)=f_0(x) + \sum_{i=1}^{m}\lambda_i f_i(x)
+\end{aligned*}
+\end{equation*}
+
+выполняются условия:
+\begin{enumerate}
+\item стационарности (2)
+\item неотрицательной определенности матрицы вторых производных: \\ 
+(3) $(\mathcal{L}''(x^*,\lambda^*)h,h) \geq 0$ $\forall h \in \{ (f'_i(x^*),h) = 0 (i = \overline{1,m})\}$
+\end{enumerate}
+\textbf{Rem:} Для т.$x^* \in locmax f_0$ need $\mathcal{L}(x,\lambda)=-f_0(x) + \sum _{i=1}^{m} \lambda_i f_i(x)$ \\
+
+\newpage
+
+\begin{theorem}
+достаточное условие экстремума II порядка.
+\end{theorem}
+\noindent
+If в т. $x^* = (x_1^*,...,x_n^*)$ векторы $f'_1(x^*),...,f'_m(x^*)$ - линейно независимы и $\exists$ вектор множителей Лагранжа $\lambda^* = (\lambda_1^*,...,\lambda_m^*) \in R^m (\lambda^* \neq 0)$ такой, что для функции Лагранжа 
+
+\begin{equation*}
+\begin{aligned*}
+\mathcal{L}(x,\lambda)=f_0(x) + \sum_{i=1}^{m}\lambda_i f_i(x)
+\end{aligned*}
+\end{equation*}
+ в т.$x^*$ выполняются условия:
+
+\begin{enumerate}
+\item стационарности (2)
+\item положительной определенности матрицы вторых производных: \\
+$(\mathcal{L}(x^*,\lambda^*)h,h)>0$ $\forall h \in \{(f'_i(x^*),h)=0 (i=\overline{1,m}),(h \neq 0)\}$ $\Rightarrow$ \\ $\Rightarrow$ then т. $x^* \in locmin f_0$ 
+\end{enumerate}
+\textbf{Rem:} Для т.$x^* \in locmax f_0$ need $ \mathcal{L}(x,\lambda) = -f_0(x) + \sum_{i=1}^{m}\lambda_i f_i$ \\ 
+
+Частный случай \\
+$z= f(x,y) \rightarrow$ extr; при $\varphi(x,y) = 0$ $\Rightarrow$ функция Лагранжа 've вид: \\
+$\mathcal{L}(x,y,\lambda) = f(x,y) + \lambda \varphi(x,y)$ \\
+
+Условия стационарности(необх. усл. I порядка)(2): \\
+\begin{cases}
+\mathcal{L}'_x(x^*,y^*,\lambda^*)=f'_x(x^*,y^*)+\lambda \varphi'_x(x^*,y^*) = 0 \\
+\mathcal{L}'_y(x^*,y^*,\lambda^*)=f'_y(x^*,y^*)+\lambda \varphi'_y(x^*,y^*) = 0 \\
+\mathcal{L}'_\lambda(x^*,y^*,\lambda^*) = \varphi'(x^*,y^*) = 0
+\end{cases}  \\ 
+$\Rightarrow$ система трех уравнений с тремя неизвестными \\ $\Rightarrow$ находим стационарные точки $(x^*,y^*,\lambda^*)$ \\
+
+\noindent Вычисляется в каждой из get-х стационарных точек $(x^*,y^*,\lambda^*)$ определитель:\\
+
+$\Delta$ = - 
+\begin{vmatrix}
+0&\varphi'_x&\varphi'_y \\
+\varphi'_x& \mathcal{L}''_{xx}&\mathcal{L}''_{xy} \\
+\varphi'_y& \mathcal{L}''_{yx}&\mathcal{L}''_{yy}
+\end{vmatrix} \\
+
+\noindent if $\Delta > 0 \Rightarrow$ then т.$(x^*,y^*,\lambda^*) \in$ locmin z \\
+if $\Delta < 0 \Rightarrow$ then т.$(x^*,y^*,\lambda^*) \in$ locmax z
+
+\subsection*{Условная оптимизация с ограничениями-равенствами и неравенствами. Математическое программирование} \\
+\textbf{def:} Задачей условной оптимизации с ограничениями-равенствами и ограничениями-неравентсвами называется следующая задача: \\
+(4)$f_0(x) \rightarrow min$; (5)$f_i(x) \leq 0$ $(i = \overline{1,p})$, (6)$f_i(x) = 0$ $(i = \overline{p+1,m})$, \\ 
+где $f_i(x): R^n \rightarrow R (i = \overline{0,m})$ \\
+
+\noindent \textbf{def:} Эта задача называется задачей математического программирования (ЗМП) \\
+\noindent \textbf{Rem:} \\
+1) Обычно в ЗМП присутствуют условия неотрицательности переменных $x_i \geq (i = \overline{1,n})$ эти условия записываются в системе неравенств (5) в виде: $-x_i \leq 0 (i = \overline{1,n})$ \\
+2) Каждое ограничение-равенство (6) можно заменить двумя неравенствами: \\
+$f_i(x) = 0 \Leftrightarrow$ 
+\begin{cases}
+f_i(x) \leq 0 \\
+-f_i(x) \leq 0 
+\end{cases} $(i = \overline{p+1, m})$
+
+\noindent В силу этих замечаний ЗМП можно записать в виде: \\
+$f_0(x) \rightarrow min$ \\
+$f_i(x) \leq 0$ $(i = \overline{1,m})$ (8)
+где $x = (x_1,...,x_n)$
+
+Для ЗМП составляется функция Лагранжа
+\begin{equation*}
+\mathcal{L}(x_1,...,x_n;\lambda_1,...,\lambda_m) = f_0(x1,...,x_n) + \sum_{i=1}^{m} \lambda_i f_i(x_1,...,x_n)
+\end{equation*} 
+С помощью функции Лагранжа выписываются необходимые и достаточные условия экстремума тип (2)-(3). Однако,  проверка выполнения этих условий становится еще более сложной. При этом требуется решать систему, вообще говоря, нелинейных уравнений и неравенств. Для этого применяются итерационные численные методы, формирующие последовательность точек, сходящуюся к точке экстремума. Однако, эта точка может оказаться точкой локального(а не глобального) экстремума. Это объясняется тем, что ЗМП в такой общей постановке, без каких-либо предположений относительной функций $f_i(x)$, является многоэкстремальной задачей. Не существует универсальных методов решения таких задач. Содержательная теория построена лишь для отдельных классов ЗМП, в частности, задач оптимизации выпуклых функций на выпуклом множестве решений систем ограничений-неравенств. Такие задачи, называемые задачами выпуклого программирования(ЗВП), являются, как будет показано ниже, одноэкстремальными задачами.
+
+\end{document}
