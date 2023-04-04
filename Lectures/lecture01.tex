@@ -27,7 +27,7 @@ $\upvarphi(x_i^*)=0 \Leftrightarrow $ $\frac{\partial f(x^*)}{\partial x_i} = 0$
 Для формулировки достаточных условий extr, позволяющих отобрать среди стационарных точек именно точки локального extr(среди стационарных точек могут быть также точки перегиба, седловые точки и т.д.), рассмотрим матрицу вторых производных функции - матрицу Гессе(гессиан):
 \cent{$A=f^{''}(x^*) = (\frac{\partial ^2 f(x^*)}{\partial x_i \partial x_j})_{i, j = \overline{1, n}} = (a_{i, j})_{i, j = \overline{1,n}}$ (от 1 до n)}
 \textbf{def:} Матрица "A" называется неотрицательно определённой $(A \geq 0),$  если $\forall h = (h_1,...,h_n) \in R^n$ неотрицательной является квадратичная форма:
-\cent{$(A*h, h) = \Upsigma _{i, j = 1}^n a_{ij}h_ih_j \geq 0$} \\ [2mm]
+\cent{$(A*h, h) = \Upsigma_{i, j = 1}^n a_{ij}h_ih_j \geq 0$}
 \textbf{def:} Матрица "A" называется положительно определённой $(A>0)$, если $(A*h, h)>0, \forall h \in R^n (h \neq 0)$
 \newpage
 \subsection*{Необходимые и достаточные условия extr II порядка}
@@ -38,7 +38,7 @@ f(x) \Rightarrow \  f^{'}(x^*)=0; (f^{''}(x^*)*h, h) \geq 0 \ ((f^{''}(x^*)*h, h
 \textbf{Доказательство:} \\
 Для случая минимума (для максимума аналогично) \\
 По формуле Тейлора 've:
-\cent{$f(x^*+h) = f(x^*) + (f^{'} (x^*), h) + \frac{1}{2}(f^{''}(x^*)*h, h) + r(h)$,\\ где $r(h)=o(|h|^2). (*)$} \\
+\cent{$f(x^*+h) = f(x^*) + (f^{'} (x^*), h) + \frac{1}{2}(f^{''}(x^*)*h, h) + r(h)$,\\ где $r(h)=o(|h|^2). (*)$}
 \textbf{1) Необходимость:} \\
 Пусть точка $x^*$ - точка локального минимума $\Rightarrow$ по необходимому условию I порядка $f^{'}(x^*)=0$, а также $f(x^* + \uplambda h) \geq f(x^*)$ (при достаточно малых $"\uplambda"$) $\Rightarrow$ из (*) get (g при малых $"\uplambda"$ и фиксированном $"h"$):
 \cent{$f(x^{*}+\uplambda h) - f(x^*) = 0 + \frac{\uplambda^2}{2} (f^{''}(x^*)*h, h) + r( \uplambda*h) \geq 0 |: \uplambda^2$\\
@@ -47,8 +47,8 @@ $\frac{1}{2}(f''(x^*)*h, h)+\frac{r(\lambda *h)}{\lambda^2} \geq 0$}\\
 При $\lambda \rightarrow 0 \ 've: (f''(x^*)*h)\geq 0 (\forall h \in R^n) \Rightarrow $ необходимость доказана \\
 \textbf{2) Достаточность:}\\
 Можно показать, что в $R^n$ имеет место эквивалентность условий:
-\cent{$(A*h, h)>0 \forall h \in R^n (h \neq 0) \Leftrightarrow \exists \alpha > 0: (A*h, h) \geq \alpha*|R|^2 \ (\forall h \in R^n)$}\\
-Учитывая, что $f'(x^*)=0$ и $(f''(x^*)*h,h)\geq \alpha * |h|^2$\\
+\eqn{(A*h, h)>0 \forall h \in R^n (h \neq 0) \Leftrightarrow \exists \alpha > 0: (A*h, h) \geq \alpha*|R|^2 \ (\forall h \in R^n)}
+Учитывая, что $f'(x^*)=0$ и $(f''(x^*)*h,h)\geq \alpha * |h|^2$ \\
 По формуле Тейлора 've:\\
 $f(x^*+h)-f(x^*)=0+\frac{1}{2}(f''(x^*)*h,h)+r(h)\geq \frac{\alpha}{2}|h|^2+r(h) \geq 0))$, то есть $f(x^*+h) \geq f(x^*) \Rightarrow$ точка $x^*$ - точка локального extr функции $f(x) \Rightarrow$ достаточность доказана.
 \begin{center}
