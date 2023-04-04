@@ -1,42 +1,5 @@
-\documentclass[a4paper]{article}
-\usepackage[utf8]{inputenc}
-\usepackage{ulem}
-\usepackage{upgreek}
-\usepackage[T2A]{fontenc}
-\usepackage[english,russian]{babel} % используемые языки в документе
-\usepackage[left=25mm, top=20mm, right=25mm, bottom=30mm, nohead, nofoot]{geometry} %отступы
-\usepackage{amsmath,amsfonts,amssymb} % математический пакет
-\usepackage{fancybox,fancyhdr}%шапка документа
-\usepackage{graphicx}%Вставка картинок правильная
-\usepackage{float}%"Плавающие" картинки
-\usepackage{wrapfig}%Обтекание фигур (таблиц, картинок и прочего)
-%\usepackage{enumetem}
+\ProvidesFile{lecture01.tex}[Лекция 1]
 
-% цвет ссылок
-%\usepackage{xcolor}
-%\usepackage{hyperref}
-%\hypersetup{colorlinks=true, allcolors=[RGB]{010,090,200}}
-
-%размер шрифта section
-\titleformat{\section}{\Large\bfseries}
-
-%размер шрифта subsection
-\usepackage{titlesec}
-\titleformat{\subsection}{\fontfamily{phv}\fontsize{14}{15}\selectfont\bfseries}{\thesubsection}{1em}{}
-
-%выбор цвета для subsection
-\usepackage{xcolor}
-\titleformat{\subsection}[hang]{\normalfont\large\bfseries\color{blue}}{\thesubsection}{1em}{}
-
-%центрирование subsection
-\usepackage{titlesec} 
-\titleformat{\subsection}[display]{\centering\fontsize{14}{16}\selectfont\bfseries}{\Roman{subsection}.}{1em}{}
-
-\newcommand{\cent}[1]{\begin{center}{#1}\end{center}} % созданная вручную команда для центрирования
-\newcommand{\lr}[1]{\left({#1}\right)} % созданная вручную команда для скобок
-\newcommand{\eqn}[1]{\begin{equation*}{#1}\end{equation*}} % созданная вручную команда для equation*
-\newcommand{\eq}[1]{\begin{equation}{#1}\end{equation}} % созданная вручную команда для equation
-\newcommand{\cs}[1]{\begin{cases}{#1}\end{cases}} % созданная вручную команда для системы
 
 \begin{document}
 \Large %размер шрифта обычных слов

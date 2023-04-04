@@ -1,33 +1,30 @@
-\ProvidesPackage{environments}
+\ProvidesPackage{packages}
 
-% Теоремы
-\theoremstyle{plain}
-\newtheorem{theorem}{Теорема}
-\newtheorem{lemma}[theorem]{Лемма} 
-\newtheorem{proposition}[theorem]{Предложение}
-\newtheorem{corollary}[theorem]{Следствие}
-\newtheorem{claim}[theorem]{Утверждение}
+\RequirePackage[utf8]{inputenc}
+\RequirePackage{ulem}
+\RequirePackage{upgreek}
+\RequirePackage[T2A]{fontenc}
+\RequirePackage[english,russian]{babel} % используемые языки в документе
+\RequirePackage[left=25mm, top=20mm, right=25mm, bottom=30mm, nohead, nofoot]{geometry} %отступы
+\RequirePackage{amsmath,amsfonts,amssymb} % математический пакет
+\RequirePackage{fancybox,fancyhdr}%шапка документа
+\RequirePackage{graphicx}%Вставка картинок правильная
+\RequirePackage{float}%"Плавающие" картинки
+\RequirePackage{wrapfig}%Обтекание фигур (таблиц, картинок и прочего)
+%\usepackage{enumetem}
 
-\newtheorem*{claim*}{Утверждение}
-\newtheorem*{theorem*}{Теорема}
-\newtheorem*{lemma*}{Лемма}
+%не моё
+\RequirePackage[colorlinks=true, urlcolor=blue]{hyperref}   
+\RequirePackage{multicol}
+\RequirePackage{enumerate}
 
-% Определения
-\theoremstyle{definition}
-\newtheorem{definition}[theorem]{Определение}
-\newtheorem{problem}[theorem]{Задача}
-\newtheorem{problems}[theorem]{Задачи}
+%размер шрифта subsection
+\RequirePackage{titlesec}
+\titleformat{\subsection}{\fontfamily{phv}\fontsize{14}{15}\selectfont\bfseries}{\thesubsection}{1em}{}
+%выбор цвета для subsection
+\RequirePackage{xcolor}
+\titleformat{\subsection}[hang]{\normalfont\large\bfseries\color{blue}}{\thesubsection}{1em}{}
+%центрирование subsection
+\RequirePackage{titlesec} 
+\titleformat{\subsection}[display]{\centering\fontsize{14}{16}\selectfont\bfseries}{\Roman{subsection}.}{1em}{}
 
-\newtheorem*{definition*}{Определение}
-\newtheorem*{problem*}{Задача}
-\newtheorem*{problems*}{Задачи}
-\newtheorem*{fact*}{Факт}
-
-% Замечания и примеры
-\theoremstyle{remark}
-\newtheorem{example}[theorem]{Пример}
-\newtheorem{examples}[theorem]{Примеры}
-\newtheorem{remark}[theorem]{Замечание}
-
-\newtheorem*{example*}{Пример}
-\newtheorem*{remark*}{Замечание}
