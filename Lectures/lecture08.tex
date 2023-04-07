@@ -1,4 +1,4 @@
-\ProvidesFile{lecture06.tex}[Лекция 6]
+\ProvidesFile{lecture08.tex}[Лекция 8]
 
 \newpage
 
@@ -45,5 +45,18 @@ $F=x_1+x_2 \rightarrow max$
 Оценочные отношения $\Rightarrow$ Наибольшее возможное зачение: $x_2 = min (1;3; \infty ) \Rightarrow$ 1-ое уравнение - разрпешающее \\
 \textbf{II шаг}\\
 Базисные --- $(x_2; x_4; x_5)$ ; свободные --- $(x_1, x_3)$
-
-
+\eqn{
+    \begin{cases}
+        x_2 = 1+x_1+x_3 \\
+        x_4 = 3+x_1-(1+x_1+x_3)=2\\
+        x_5=3-x_1
+    \end{cases}
+} 
+$\Rightarrow$ get ДБР: $X_2=(0;1;0;2;3)$; \\
+\eqn{
+    F=x_1+(1+x_1+x_3)=1+2x_1+x_3;
+}
+\cent{
+    $F(X_2)=1 \neq F_{max}$
+}
+$\Rightarrow$ следующий шаг симплексного метода...
