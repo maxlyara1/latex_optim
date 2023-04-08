@@ -22,11 +22,14 @@
 \RequirePackage[colorlinks=true, urlcolor=blue, linkcolor=black]{hyperref}   
 \RequirePackage{multicol}
 \RequirePackage{enumerate}
-
+\RequirePackage{array}
 %размер шрифта subsection
 \RequirePackage{titlesec}
 \titleformat{\subsection}{\fontfamily{phv}\fontsize{10}{10}\selectfont\bfseries}{\thesubsection}{1em}{}
 %выбор цвета для subsection
 \RequirePackage{xcolor}
 \titleformat{\subsection}[hang]{\normalfont\large\bfseries\color{blue}}{\thesubsection}{1em}{}
-
+%размер шрифта для subsubsection 
+%\titleformat{\subsubsection}{\fontfamily{phv}\fontsize{10}{10}\selectfont\bfseries}{\thesubsection}{1em}{}
+%выбор размера шрифта и цвета для subsubsection
+\titleformat{\subsubsection}[hang]{\normalfont\large\bfseries\color{black}}{\thesubsubsection}{1em}{}
